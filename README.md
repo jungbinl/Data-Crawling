@@ -1,10 +1,8 @@
 # Data-Crawling
-1. FnGuide Web Crawling for Financial Statements and Ratios
-Technologies: Uses httr, rvest, stringr, and dplyr for HTML scraping and table parsing.
-
-Purpose: Automatically collects income statement, balance sheet, and cash flow data from FnGuide for Korean listed companies, calculates key ratios (PER, PBR, PCR, PSR) using stock price and shares outstanding.
-
-Features: Includes error handling, request throttling, and saves both individual and aggregated files.
+## FnGuide Web Crawling for Financial Statements and Ratios
+  Technologies: Uses httr, rvest, stringr, and dplyr for HTML scraping and table parsing.
+  Purpose: Automatically collects income statement, balance sheet, and cash flow data from FnGuide for Korean listed companies, calculates key ratios (PER, PBR, PCR, PSR) using stock price and shares outstanding.
+  Features: Includes error handling, request throttling, and saves both individual and aggregated files.
 
 2. Naver Finance Mobile API for 3-Year Daily Stock Prices
 Technologies: Utilizes httr, rvest, readr, and lubridate for API requests, CSV parsing, and date handling.
