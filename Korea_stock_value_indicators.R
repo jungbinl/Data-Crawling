@@ -9,7 +9,7 @@ library(readr)
 
 kor_ticker <- read.csv("kor_ticker.csv", fileEncoding = "CP949")
 
-# bring PBR, PER, PCR, PSR, Loading financial statements, TEST
+# bring PBR, PER, PCR, PSR, Loading value indicators, TEST
 for(i in 1 : 510){
   data_fs = c()
   data_value = c()
@@ -64,7 +64,7 @@ for(i in 1 : 510){
   
 }
 
-# bring PBR, PER, PCR, PSR, Loading financial statements and gather
+# bring PBR, PER, PCR, PSR, Loading value indicators and gather
 
 select_fs = list()
   
@@ -123,6 +123,7 @@ for(i in 1: nrow(kor_ticker)){
 select_fs_final <- bind_rows(select_fs) %>% mutate('code' = kor_ticker[ ,5])
 
 write.csv(select_fs_final, file = paste0("C:/Users/이정빈/Desktop/practice_r/", "kor_fs.csv"), fileEncoding = "CP949")
+
 
 
 
