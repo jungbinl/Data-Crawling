@@ -6,13 +6,8 @@ library(rvest)
 library(readr)
 
 # loading raw data
-down_sector <- read.csv('data_3014_20250727.csv', fileEncoding = "CP949", row.names = 1, stringsAsFactors = F)
-down_ind <- read.csv('data_3404_20250727.csv', fileEncoding = "CP949")
 
-kor_ticker <- merge(down_ind, down_sector, by = intersect(names(down_ind), names(down_sector)), all = T) %>% arrange(-시가총액)
-
-kor_ticker[grepl('스팩', kor_ticker[, '종목명']), '종목명']
-kor_ticker <- kor_ticker %>% filter(!종목명 %in% str_detect(종목명, '스팩')) %>% filter(!종목코드 %in% 종목코드 / 10 == 0)
+kor_ticker <- read.csv("kor_ticker.csv", fileEncoding = "CP949")
 
 # bring PBR, PER, PCR, PSR, Loading financial statements, TEST
 for(i in 1 : 510){
@@ -128,5 +123,6 @@ for(i in 1: nrow(kor_ticker)){
 select_fs_final <- bind_rows(select_fs) %>% mutate('code' = kor_ticker[ ,5])
 
 write.csv(select_fs_final, file = paste0("C:/Users/이정빈/Desktop/practice_r/", "kor_fs.csv"), fileEncoding = "CP949")
+
 
 
