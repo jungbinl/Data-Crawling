@@ -13,7 +13,7 @@
 
   - Features: Implements error handling, 2-second delay between requests, and merges data using full joins.
 
-###  Financial Supervisory Service (DART) Open API for Disclosure Financial Data
+###  Financial Supervisory Service (DART, fnGuide) Open API for Disclosure Financial Data
   - Technologies: Leverages httr, rvest, jsonlite, stringr, and dplyr for JSON API calls, XML parsing, and dataframe transformation.
 
   - Purpose: Fetches year-wise detailed financial statement data from Korea’s DART disclosure system using corporate codes and API key, extracting key accounts and saving CSVs.
